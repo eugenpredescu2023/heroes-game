@@ -1,0 +1,180 @@
+body {
+  background-image: url("assets/zhibo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-position: top center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title {
+  text-align: center;
+  font-size: 50px;
+  
+}
+.btns-container {
+    display: flex;
+    justify-content: center;
+}
+.btn {
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+.start-fight {
+    display: none;
+}
+.heroes-container {
+    display: none;
+    margin-top: 30px;
+    justify-content: center;
+}
+.hero-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color:#e0e7de8a;
+    height: 350px;
+    flex-basis: 15%;
+    border-radius: 20px;
+    margin: 0 40px;
+}
+.hero-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 10px 0;
+}
+.dragon {
+    background-image: url("assets/dragon-china.png");
+}
+.sprite {
+    background-image: url("assets/sprite-3.png");
+}
+.dwarf {
+    background-image: url("assets/Dwarf-Warrior.png");
+}
+.hero-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.hero-name {
+    font-size: 30px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.show-winner {
+    display: none;
+}
+
+#show-winner {
+    background-color: #e0e7de8a;
+    padding: 30px;
+    width: 800px;
+    margin: 30px auto;
+    font-size: 20px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 700;
+    animation: pulse-animation 2s infinite;
+    
+}
+
+@keyframes pulse-animation {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+  }
+
+.d-none {
+    display: none;
+}  
+
+.d-flex {
+    display: flex;
+}
+
+.d-block {
+    display: block;
+}
+
+/******responsive css******/
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .title {
+      font-size: 60px;
+    }
+    .btn {
+      font-size: 32px;
+      padding: 12px 28px;
+    }
+    .hero-name {
+      font-size: 32px;
+      letter-spacing: 2px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .heroes-container {
+      margin-top: 20px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    body {
+      background-repeat: repeat;
+    }
+    .heroes-container {
+      flex-direction: column;
+    }
+    .hero-container {
+      flex-direction: row;
+      margin: 20px 0;
+      justify-content: space-between;
+      padding: 0 10px;
+    }
+    .hero-details {
+      align-items: end;
+    }
+    .hero-name {
+      font-size: 23px;
+    }
+    #show-winner {
+      width: auto;
+    }
+  }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    .hero-container {
+      justify-content: space-around;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
